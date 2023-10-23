@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KABAN\\RiderProjects\\AppSovmest\\AppSovmest\\AppSovmest.csproj": {}
+    "C:\\Users\\Kostya\\Desktop\\AppSovmest\\AppSovmest\\AppSovmest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KABAN\\RiderProjects\\AppSovmest\\AppSovmest\\AppSovmest.csproj": {
+    "C:\\Users\\Kostya\\Desktop\\AppSovmest\\AppSovmest\\AppSovmest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KABAN\\RiderProjects\\AppSovmest\\AppSovmest\\AppSovmest.csproj",
+        "projectUniqueName": "C:\\Users\\Kostya\\Desktop\\AppSovmest\\AppSovmest\\AppSovmest.csproj",
         "projectName": "AppSovmest",
-        "projectPath": "C:\\Users\\KABAN\\RiderProjects\\AppSovmest\\AppSovmest\\AppSovmest.csproj",
-        "packagesPath": "C:\\Users\\KABAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KABAN\\RiderProjects\\AppSovmest\\AppSovmest\\obj\\",
+        "projectPath": "C:\\Users\\Kostya\\Desktop\\AppSovmest\\AppSovmest\\AppSovmest.csproj",
+        "packagesPath": "C:\\Users\\Kostya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Kostya\\Desktop\\AppSovmest\\AppSovmest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\KABAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Kostya\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

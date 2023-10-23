@@ -13,16 +13,16 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AppSovmest
-build_property.ProjectDir = C:\Users\KABAN\RiderProjects\AppSovmest\AppSovmest\
+build_property.ProjectDir = C:\Users\Kostya\Desktop\AppSovmest\AppSovmest\
 
-[C:/Users/KABAN/RiderProjects/AppSovmest/AppSovmest/AddOrderEquipment.axaml]
+[C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/AddOrderEquipment.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/KABAN/RiderProjects/AppSovmest/AppSovmest/AddTypeEquipment.axaml]
+[C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/AddTypeEquipment.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/KABAN/RiderProjects/AppSovmest/AppSovmest/App.axaml]
+[C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/KABAN/RiderProjects/AppSovmest/AppSovmest/MainWindow.axaml]
+[C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

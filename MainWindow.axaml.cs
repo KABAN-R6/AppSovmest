@@ -18,9 +18,9 @@ public partial class MainWindow : Window
         _connectionSb = new MySqlConnectionStringBuilder
         {
             Server = "localhost",
-            Database = "test",
+            Database = "pro2",
             UserID = "root",
-            Password = "Givig-6812"
+            Password = "123456"
 
         };
         UpdateData();
