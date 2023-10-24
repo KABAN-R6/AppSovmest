@@ -26,3 +26,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/Profile.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

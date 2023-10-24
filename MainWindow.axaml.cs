@@ -36,7 +36,7 @@ public partial class MainWindow : Window
         {
             if (loginuser.Equals(client.login) && passuser.Equals(client.Password))
             {
-                new AddOrderEquipment().ShowDialog(this);
+                new Profile().ShowDialog(this);
            
                 break;
             }

@@ -1,0 +1,53 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" Width="300" Height="450"
+        x:Class="AppSovmest.Profile"
+        Title="Profile">
+    
+    <StackPanel
+        Orientation="Vertical"
+        Margin="0,0,0,0"
+        >
+        <Menu >
+            <MenuItem Header="Профиль">
+                <MenuItem Header="Выйти из аккаунта"
+                          Click="LogOutClick"></MenuItem>
+            </MenuItem>
+            
+        </Menu>
+        <Grid 
+            Margin="0,0,0,10"
+            Tapped="InputElement_OnTapped"
+            >
+            <Image Width="70"
+                   Height="73"
+                   ></Image>
+            <StackPanel
+                Orientation="Vertical"
+                Background="#1C1C1C"
+                HorizontalAlignment="Stretch">
+                <TextBlock 
+                    Margin="10"
+                    Name="name"
+                    Text="Костя Семён"></TextBlock>
+                <TextBlock 
+                    Name="login"
+                    Margin="10"
+                    Text="Kostya"
+                    ></TextBlock>
+            </StackPanel>
+        </Grid>
+        <StackPanel
+            Orientation="Horizontal"
+            Tapped="BtnOrderClick"
+            >
+            <Image ></Image>
+            <TextBlock
+                Margin="10,0,0,0"
+                Text="Заказы"></TextBlock>
+        </StackPanel>
+        
+    </StackPanel>
+</Window>
