@@ -17,37 +17,47 @@
             </MenuItem>
             
         </Menu>
-        <Grid 
-            Margin="0,0,0,10"
-            Tapped="InputElement_OnTapped"
-            >
-            <Image Width="70"
-                   Height="73"
-                   ></Image>
+        <Border Background="Gray"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                >
             <StackPanel
-                Orientation="Vertical"
-                Background="#1C1C1C"
-                HorizontalAlignment="Stretch">
-                <TextBlock 
-                    Margin="10"
-                    Name="name"
-                    Text="Костя Семён"></TextBlock>
-                <TextBlock 
-                    Name="login"
-                    Margin="10"
-                    Text="Kostya"
+                Orientation="Horizontal">
+                <Image Width="70"
+                       Height="73"
+                       ></Image>
+                <StackPanel
+                    Orientation="Vertical"
+                    Background="#1C1C1C"
+                    MinWidth="230"
+                    HorizontalAlignment="Stretch">
+                    <TextBlock 
+                        Margin="10"
+                        Name="name"
+                        Text="Костя Семён"></TextBlock>
+                    <TextBlock 
+                        Name="login"
+                        Margin="10"
+                        Text="Kostya"
                     ></TextBlock>
+                </StackPanel>
             </StackPanel>
-        </Grid>
-        <StackPanel
-            Orientation="Horizontal"
+        </Border>
+        <Border
+            BorderBrush="Gray"
+            BorderThickness="1"
+            
             Tapped="BtnOrderClick"
             >
-            <Image ></Image>
-            <TextBlock
-                Margin="10,0,0,0"
-                Text="Заказы"></TextBlock>
-        </StackPanel>
+            <StackPanel 
+                Margin="10,10,0,0"
+                Orientation="Horizontal">
+                <Image ></Image>
+                <TextBlock
+                    Text="Заказы"></TextBlock>
+            </StackPanel>
+            
+        </Border>
         
     </StackPanel>
 </Window>
