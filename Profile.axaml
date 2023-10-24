@@ -21,15 +21,19 @@
                 BorderBrush="Gray"
                 BorderThickness="1"
                 >
+            
+            
             <StackPanel
                 Orientation="Horizontal">
-                <Image Width="70"
+                <Image Width="75"
                        Height="73"
-                       ></Image>
+                       Source="Assets/AndroidImage.png"
+                       >
+                </Image>
                 <StackPanel
                     Orientation="Vertical"
                     Background="#1C1C1C"
-                    MinWidth="230"
+                    MinWidth="223"
                     HorizontalAlignment="Stretch">
                     <TextBlock 
                         Margin="10"
@@ -46,12 +50,12 @@
         <Border
             BorderBrush="Gray"
             BorderThickness="1"
-            
-            Tapped="BtnOrderClick"
             >
             <StackPanel 
                 Margin="10,10,0,0"
-                Orientation="Horizontal">
+                Orientation="Horizontal"
+                Tapped="BtnOrderClick"
+                >
                 <Image ></Image>
                 <TextBlock
                     Text="Заказы"></TextBlock>

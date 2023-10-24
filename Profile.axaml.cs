@@ -12,19 +12,17 @@ public partial class Profile : Window
     {
         InitializeComponent();
     }
-
-    private void InputElement_OnTapped(object? sender, TappedEventArgs e)
+   
+    private void BtnOrderClick(object? sender, TappedEventArgs e)
     {
-        throw new System.NotImplementedException();
+        new ListOrders().Show();
+
     }
 
     private void LogOutClick(object? sender, RoutedEventArgs e)
     {
-        Close();
+        this.Close();
     }
 
-    private void BtnOrderClick(object? sender, TappedEventArgs e)
-    {
-        throw new System.NotImplementedException();
-    }
+    
 }

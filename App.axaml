@@ -12,4 +12,5 @@
              <Application.Resources>
                  <themes:BundledTheme BaseTheme="Dark" PrimaryColor="Purple" SecondaryColor="Amber"/>
              </Application.Resources>
+             
 </Application>

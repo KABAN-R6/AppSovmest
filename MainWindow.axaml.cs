@@ -36,8 +36,7 @@ public partial class MainWindow : Window
         {
             if (loginuser.Equals(client.login) && passuser.Equals(client.Password))
             {
-                new Profile().ShowDialog(this);
-           
+                new Profile().Show();
                 break;
             }
         }

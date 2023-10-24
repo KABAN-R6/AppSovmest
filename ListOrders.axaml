@@ -1,0 +1,26 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:AvaloniaApplication7.Models"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AppSovmest.ListOrders"
+        Title="ListOrders"
+        >
+    <ListBox Name="listOrders" 
+             >
+    <ListBox.ItemTemplate>
+        <DataTemplate>
+            <Border Background="Red" CornerRadius="4" Padding="4">
+                <StackPanel
+                    x:DataType="models:OrderEquipment"
+                    Orientation="Horizontal">
+                    <TextBlock Text="{Binding Id}"></TextBlock>
+                    <TextBlock Text="{Binding Client}"></TextBlock>
+                    <TextBlock Text="{Binding DescriptionProblem}"></TextBlock>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </ListBox.ItemTemplate>
+</ListBox>
+</Window>
