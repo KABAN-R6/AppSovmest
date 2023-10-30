@@ -9,7 +9,7 @@ namespace AppSovmest;
 
 public partial class AddOrderEquipment : Window
 {
-   
+    public DBHelper db = new DBHelper();
     public AddOrderEquipment()
     {
         InitializeComponent();
