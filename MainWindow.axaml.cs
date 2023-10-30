@@ -9,20 +9,12 @@ namespace AppSovmest;
 public partial class MainWindow : Window
 {
     private List<Client> Clients { get; set; }
-    private MySqlConnectionStringBuilder _connectionSb;
+    public DBHelper db = new DBHelper();
     public MainWindow()
     {
         
         InitializeComponent();
         Clients = new List<Client>();
-        _connectionSb = new MySqlConnectionStringBuilder
-        {
-            Server = "localhost",
-            Database = "pro2",
-            UserID = "root",
-            Password = "123456"
-
-        };
         UpdateData();
     }
     
@@ -36,19 +28,18 @@ public partial class MainWindow : Window
         {
             if (loginuser.Equals(client.login) && passuser.Equals(client.Password))
             {
-                new Profile().Show();
+                new Profile(client).Show();
+                Close();
                 break;
+                
             }
         }
-        
-
-        
         
     }
 
     public void UpdateData()
     {
-        using (var connection = new MySqlConnection(_connectionSb.ConnectionString))
+        using (var connection = new MySqlConnection(db._connectionString.ConnectionString))
         {
             connection.Open();
             using (var command = connection.CreateCommand())
@@ -57,7 +48,9 @@ public partial class MainWindow : Window
                 var reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Clients.Add(new Client(reader.GetInt16("Id"), reader.GetString("name"), reader.GetString("login"),
+                    Clients.Add(new Client(reader.GetInt16("Id"), 
+                        reader.GetString("name"), 
+                        reader.GetString("login"),
                         reader.GetString("Password")));
                 }
             }
@@ -65,4 +58,6 @@ public partial class MainWindow : Window
             connection.Close();
         }
     }
+    
+    
 }

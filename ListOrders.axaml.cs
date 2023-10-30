@@ -10,42 +10,20 @@ namespace AppSovmest;
 public partial class ListOrders : Window
 {
     private List<OrderEquipment> orderEquipmentt { get; set; }
-    private MySqlConnectionStringBuilder _connectionSb;
 
-    public ListOrders()
+    private Client _client;
+    public ListOrders(Client client)
     {
-
+        _client = client;
         InitializeComponent();
         orderEquipmentt = new List<OrderEquipment>();
-        _connectionSb = new MySqlConnectionStringBuilder
-        {
-            Server = "localhost",
-            Database = "pro2",
-            UserID = "root",
-            Password = "123456"
-        };
         update();
-        List<OrderEquipment> orders = new List<OrderEquipment>();
-        orders.Add(new OrderEquipment()
-        {
-            Id = 1,
-            Client = 1,
-            DescriptionProblem = "Проблема"
-
-        });
-        orders.Add(new OrderEquipment()
-        {
-            Id = 32323,
-            Client = 6,
-            DescriptionProblem = "SD:LKAp[dsk-sakd"
-
-        });
-        listOrders.ItemsSource = orders;
+        listOrders.ItemsSource = orderEquipmentt;
     }
 
     private void update()
     {
-        using (var connection = new MySqlConnection(_connectionSb.ConnectionString))
+        using (var connection = new MySqlConnection(new DBHelper()._connectionString.ConnectionString))
         {
             connection.Open();
             using (var command = connection.CreateCommand())
@@ -53,7 +31,9 @@ public partial class ListOrders : Window
                 command.CommandText = "SELECT * FROM orderequipment " +
                                       "JOIN workers On orderequipment.Worker = workers.id " +
                                       "JOIN typefaults ON orderequipment.TypeFault = typefaults.id " +
-                                      "JOIN typeequipments ON orderequipment.TypeEquip = typeequipments.id";
+                                      "JOIN typeequipments ON orderequipment.TypeEquip = typeequipments.id " +
+                                      "WHERE Client = @id ";
+                command.Parameters.AddWithValue("@id", _client.Id);
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read())
@@ -73,7 +53,6 @@ public partial class ListOrders : Window
 
                 }
             }
-
             connection.Close();
         }
     }

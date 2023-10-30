@@ -3,24 +3,77 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:models="clr-namespace:AvaloniaApplication7.Models"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" Width="1000" Height="450"
         x:Class="AppSovmest.ListOrders"
         Title="ListOrders"
         >
-    <ListBox Name="listOrders" 
-             >
-    <ListBox.ItemTemplate>
-        <DataTemplate>
-            <Border Background="Purple" CornerRadius="4" Padding="4">
-                <StackPanel
-                    x:DataType="models:OrderEquipment"
-                    Orientation="Horizontal">
-                    <TextBlock Text="{Binding Id}" Margin="10,0,0,0"></TextBlock>
-                    <TextBlock Text="{Binding Client}" Margin="10,0,0,0"></TextBlock>
-                    <TextBlock Text="{Binding DescriptionProblem}" Margin="10,0,0,0"></TextBlock>
-                </StackPanel>
-            </Border>
-        </DataTemplate>
-    </ListBox.ItemTemplate>
-</ListBox>
+    <StackPanel Orientation="Horizontal">
+        
+        <ListBox Name="listOrders" Width="800" Margin="20">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border Background="Purple" CornerRadius="4" Padding="4">
+                        <StackPanel
+                            x:DataType="models:OrderEquipment"
+                            Orientation="Horizontal"
+                            >
+
+                            <StackPanel Orientation="Vertical" MaxWidth="100">
+                                <TextBlock Text="ID:" Width="60" Margin="10,0,0,0"></TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Id}" Margin="10,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" MaxWidth="150">
+                                <TextBlock Text="Worker:"  Margin="20,0,0,0"></TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding Worker}" Margin="40,0,0,0"></TextBlock>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Vertical" MaxWidth="130">
+                                <TextBlock Text="TypeEquip:" Margin="40,0,0,0"></TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding TypeEquip}" Margin="40,0,0,0"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" MaxWidth="100">
+                                <TextBlock Text="TypeFault:"  Margin="40,0,0,0"></TextBlock>
+                                <TextBlock  TextWrapping="Wrap" Text="{Binding TypeFault}" Margin="40,0,0,0"></TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" MaxWidth="100">
+                                <TextBlock Text="SerialNumber:"  Margin="40,0,0,0"></TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding SerialNumber}" Margin="40,0,0,0"></TextBlock>
+                            </StackPanel>
+                            
+                            <StackPanel Orientation="Vertical" MaxWidth="330"  >
+                                <TextBlock Text="DescriptionProblem:"  Margin="40,0,0,0"></TextBlock>
+                                <TextBlock TextWrapping="Wrap" Text="{Binding DescriptionProblem}" Margin="40,0,0,0"></TextBlock>
+                                
+                            </StackPanel>
+                        </StackPanel>
+                        
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button 
+            Height="70"
+            Width="70"
+            CornerRadius="50"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Margin="60,300,10,0"
+            >
+            <Button.Content>
+                <Image Source="/Assets/262038.png" Width="87" Height="87"/>
+            </Button.Content>
+        </Button>
+        
+        
+        
+        
+        
+    </StackPanel>
+    
+    
+    
+    
+    
+    
 </Window>

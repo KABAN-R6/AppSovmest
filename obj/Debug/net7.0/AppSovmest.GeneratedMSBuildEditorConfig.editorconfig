@@ -18,9 +18,6 @@ build_property.ProjectDir = C:\Users\Kostya\Desktop\AppSovmest\AppSovmest\
 [C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/AddOrderEquipment.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/AddTypeEquipment.axaml]
-build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
-
 [C:/Users/Kostya/Desktop/AppSovmest/AppSovmest/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
