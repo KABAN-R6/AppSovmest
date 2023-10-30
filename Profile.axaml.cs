@@ -15,7 +15,7 @@ public partial class Profile : Window
    
     private void BtnOrderClick(object? sender, TappedEventArgs e)
     {
-        new ListOrders().Show();
+        new AddOrderEquipment().Show();
 
     }
 

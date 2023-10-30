@@ -11,23 +11,24 @@
         Margin="0,0,0,0"
         >
         <Menu >
-            <MenuItem Header="Профиль">
+            <MenuItem Header="Профиль" Margin="0,0,0,0" >
                 <MenuItem Header="Выйти из аккаунта"
                           Click="LogOutClick"></MenuItem>
             </MenuItem>
             
         </Menu>
-        <Border Background="Gray"
-                BorderBrush="Gray"
-                BorderThickness="1"
+        <Border 
+                BorderBrush="Gray" CornerRadius="10" BorderThickness="1.4" 
+                
                 >
             
             
             <StackPanel
-                Orientation="Horizontal">
-                <Image Width="75"
+                Orientation="Horizontal"  > 
+                <Image Width="60"
                        Height="73"
-                       Source="Assets/AndroidImage.png"
+                       Source="Assets/6681204.png"
+                       Margin="4"
                        >
                 </Image>
                 <StackPanel
@@ -47,21 +48,31 @@
                 </StackPanel>
             </StackPanel>
         </Border>
-        <Border
-            BorderBrush="Gray"
-            BorderThickness="1"
-            >
-            <StackPanel 
-                Margin="10,10,0,0"
-                Orientation="Horizontal"
-                Tapped="BtnOrderClick"
-                >
-                <Image ></Image>
-                <TextBlock
-                    Text="Заказы"></TextBlock>
-            </StackPanel>
+        
+        <StackPanel Margin="8">
             
-        </Border>
+        </StackPanel>
+        <StackPanel Margin="0,10,210,0" Tapped="BtnOrderClick" Width="74">
+            <Border
+                BorderBrush="Gray"
+                BorderThickness="1"
+                CornerRadius="10" 
+            >
+                <StackPanel 
+                    Margin="10,5,0,5"
+                    Orientation="Horizontal"
+                    
+                >
+                    <Image ></Image>
+                    <TextBlock
+                        Text="Заказы"> </TextBlock>
+                </StackPanel>
+            
+            </Border>
+                              
+                                       
+           
+        </StackPanel>
         
     </StackPanel>
 </Window>

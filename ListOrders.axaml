@@ -11,13 +11,13 @@
              >
     <ListBox.ItemTemplate>
         <DataTemplate>
-            <Border Background="Red" CornerRadius="4" Padding="4">
+            <Border Background="Purple" CornerRadius="4" Padding="4">
                 <StackPanel
                     x:DataType="models:OrderEquipment"
                     Orientation="Horizontal">
-                    <TextBlock Text="{Binding Id}"></TextBlock>
-                    <TextBlock Text="{Binding Client}"></TextBlock>
-                    <TextBlock Text="{Binding DescriptionProblem}"></TextBlock>
+                    <TextBlock Text="{Binding Id}" Margin="10,0,0,0"></TextBlock>
+                    <TextBlock Text="{Binding Client}" Margin="10,0,0,0"></TextBlock>
+                    <TextBlock Text="{Binding DescriptionProblem}" Margin="10,0,0,0"></TextBlock>
                 </StackPanel>
             </Border>
         </DataTemplate>
