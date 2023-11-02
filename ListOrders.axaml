@@ -59,6 +59,7 @@
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Margin="60,300,10,0"
+            Click="OpenAddOrder"
             >
             <Button.Content>
                 <Image Source="/Assets/262038.png" Width="87" Height="87"/>

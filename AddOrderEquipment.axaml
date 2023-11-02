@@ -6,7 +6,7 @@
         mc:Ignorable="d" Width="800" Height="500"
         x:Class="AppSovmest.AddOrderEquipment"
         Title="AddOrderEquipment">
-      <StackPanel
+     <StackPanel
                 Orientation="Vertical">
               
               <Grid>
@@ -15,7 +15,7 @@
                                 <ColumnDefinition Width="100"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         
-                      <Border Background="Gray" CornerRadius="10" Margin="20 " Width="600"  HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="1.4" >
+                      <Border Background="MediumPurple" CornerRadius="10" Margin="20 " Width="600"  HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="1.4" >
                               <StackPanel >
                                       <TextBlock 
                                               Text="Данные покупателя" 
@@ -40,14 +40,12 @@
                         </Button>
                 </Grid>
               
-              <Border Background="MediumPurple" CornerRadius="10" Margin="20 " Width="600"  HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="1.4">
+              <Border  CornerRadius="10" Margin="20 " Width="600"  HorizontalAlignment="Left" BorderBrush="Black" >
                       <StackPanel  Margin="5"  
                         Orientation="Vertical"
                         Focusable="False"
-                        
                         >
-                        
-                              <Border Background="Gray" CornerRadius="10" Margin="20 " Width="550"  HorizontalAlignment="Left" BorderThickness="1.4" BorderBrush="Black"  >
+                              <Border  CornerRadius="10" Margin="7 " Width="575"  HorizontalAlignment="Left" BorderThickness="1.8" BorderBrush="Black"  >
                                       <StackPanel 
                                               Orientation="Vertical" Margin="10"
                                       >
@@ -72,12 +70,21 @@
                                                       Name="cbTypeFault"
                                                       VerticalAlignment="Bottom"
                                               ></ComboBox>
+                                              <ComboBox 
+                                                      Margin="10"
+                                                      Width="450"
+                                                      Name="cbTypeEquip"
+                                                      VerticalAlignment="Bottom"
+                                              ></ComboBox>
+                                              <ComboBox 
+                                                      Margin="10"
+                                                      Width="450"
+                                                      Name="cbWorker"
+                                                      VerticalAlignment="Bottom"
+                                              ></ComboBox>
                                       </StackPanel>
-                              
-                      
                               </Border>
-                        
-                              <Border Background="Gray" CornerRadius="10" BorderThickness="1.4" BorderBrush="Black" Margin="20 " Width="550" >
+                              <Border  CornerRadius="10" BorderThickness="1.8" BorderBrush="Black" Margin="7 " Width="575" >
                                       <StackPanel 
                                               Margin="0,10,10,10"
                                               Orientation="Horizontal">
@@ -92,19 +99,17 @@
                                               ></TextBox>
                                       </StackPanel>
                               </Border>
-                        
-                        
                 </StackPanel>
-                              
-                      
               </Border>
               
                 
-              <Border CornerRadius="10" Margin="90 " Width="450" >
-                      <StackPanel Margin="8">
-                              
-                                        
-                              <Button Content="Подтвердить заказ" BorderBrush="Black" BorderThickness="0.1" />
+              <Border CornerRadius="10" Margin="20 " Width="450" >
+                      <StackPanel Margin="0">
+                              <Button 
+                                      Content="Подтвердить заказ" 
+                                      BorderBrush="Black" 
+                                      BorderThickness="0.1"
+                                      Click="InsertOrder"/>
                       </StackPanel>
               </Border>
         </StackPanel>

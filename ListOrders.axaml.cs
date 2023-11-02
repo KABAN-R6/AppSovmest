@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using AvaloniaApplication7.Models;
 using Avalonia.Markup.Xaml;
 using MySqlConnector;
@@ -55,5 +56,10 @@ public partial class ListOrders : Window
             }
             connection.Close();
         }
+    }
+
+    private void OpenAddOrder(object? sender, RoutedEventArgs e)
+    {
+        new AddOrderEquipment(_client).Show();
     }
 }
