@@ -9,7 +9,11 @@
         >
     <StackPanel Orientation="Horizontal">
         
-        <ListBox Name="listOrders" Width="800" Margin="20">
+        <ListBox 
+            Name="listOrders" 
+            Width="800" 
+            Margin="20"
+                 SelectionChanged="UpdateOrder">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border Background="Purple" CornerRadius="4" Padding="4">

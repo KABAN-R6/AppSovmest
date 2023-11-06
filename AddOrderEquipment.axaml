@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:models="clr-namespace:AvaloniaApplication7.Models"
-        mc:Ignorable="d" Width="800" Height="500"
+        mc:Ignorable="d" Width="800" Height="730"
         x:Class="AppSovmest.AddOrderEquipment"
         Title="AddOrderEquipment">
      <StackPanel
@@ -15,14 +15,21 @@
                                 <ColumnDefinition Width="100"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         
-                      <Border Background="MediumPurple" CornerRadius="10" Margin="20 " Width="600"  HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="1.4" >
+                      <Border 
+                              Background="MediumPurple" 
+                              CornerRadius="10" 
+                              Margin="20 "
+                              Width="600"  
+                              HorizontalAlignment="Left" 
+                              BorderBrush="Black" 
+                              BorderThickness="1.4" >
                               <StackPanel >
                                       <TextBlock 
+                                              Name="tbClient"
                                               Text="Данные покупателя" 
                                               Margin="12"
                                               Grid.Column="0"
                                               Grid.Row="0"
-                                     
                                       >
                                       </TextBlock>
                               </StackPanel>
@@ -36,6 +43,7 @@
                                 Margin="20"
                                 Grid.Column="1"
                                 Grid.Row="0"
+                                Click="Clear"
                                 >
                         </Button>
                 </Grid>
@@ -52,6 +60,7 @@
                                               <TextBox 
                                                       Name="tbSerialNumber"
                                                       Watermark="Серийный номер"
+                                                      
                                                       Margin="10,10,10,10"
                                                       VerticalAlignment="Bottom"
                                                       
@@ -69,19 +78,43 @@
                                                       Width="450"
                                                       Name="cbTypeFault"
                                                       VerticalAlignment="Bottom"
-                                              ></ComboBox>
+                                              >
+                                              <ComboBox.ItemTemplate>
+                                                     <DataTemplate 
+                                                             x:DataType="models:TypeFaults">
+                                                             <TextBlock 
+                                                                     Text="{Binding Name}" 
+                                                                     FontFamily="{Binding}" />
+                                                     </DataTemplate>
+                                              </ComboBox.ItemTemplate>
+                                              </ComboBox>
                                               <ComboBox 
                                                       Margin="10"
                                                       Width="450"
                                                       Name="cbTypeEquip"
                                                       VerticalAlignment="Bottom"
-                                              ></ComboBox>
+                                              >
+                                              <ComboBox.ItemTemplate>
+                                                      <DataTemplate x:DataType="models:TypeEquipments">
+                                                              <TextBlock 
+                                                                      Text="{Binding Name}" 
+                                                                      FontFamily="{Binding}" />
+                                                      </DataTemplate>
+                                              </ComboBox.ItemTemplate>
+                                              </ComboBox>
                                               <ComboBox 
                                                       Margin="10"
                                                       Width="450"
                                                       Name="cbWorker"
-                                                      VerticalAlignment="Bottom"
-                                              ></ComboBox>
+                                                      VerticalAlignment="Bottom">
+                                                      <ComboBox.ItemTemplate>
+                                                              <DataTemplate x:DataType="models:Workers">
+                                                                      <TextBlock 
+                                                                              Text="{Binding name}" 
+                                                                              FontFamily="{Binding}" />
+                                                              </DataTemplate>
+                                                      </ComboBox.ItemTemplate>
+                                              </ComboBox>
                                       </StackPanel>
                               </Border>
                               <Border  CornerRadius="10" BorderThickness="1.8" BorderBrush="Black" Margin="7 " Width="575" >
@@ -106,10 +139,11 @@
               <Border CornerRadius="10" Margin="20 " Width="450" >
                       <StackPanel Margin="0">
                               <Button 
+                                      Name="btnAcceprOrder"
                                       Content="Подтвердить заказ" 
                                       BorderBrush="Black" 
                                       BorderThickness="0.1"
-                                      Click="InsertOrder"/>
+                                      />
                       </StackPanel>
               </Border>
         </StackPanel>

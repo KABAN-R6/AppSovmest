@@ -19,13 +19,13 @@
             
         </Menu>
         <Border 
-                BorderBrush="Gray" CornerRadius="10" BorderThickness="1.4" 
-                
+                BorderBrush="Gray" 
+                CornerRadius="10" 
+                BorderThickness="1.4" 
                 >
-            
-            
             <StackPanel
-                Orientation="Horizontal"  > 
+                Orientation="Horizontal"
+                > 
                 <Image Width="60"
                        Height="73"
                        Source="Assets/6681204.png"

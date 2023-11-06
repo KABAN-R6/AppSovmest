@@ -17,13 +17,14 @@ public partial class ListOrders : Window
     {
         _client = client;
         InitializeComponent();
-        orderEquipmentt = new List<OrderEquipment>();
+        
         update();
-        listOrders.ItemsSource = orderEquipmentt;
+        
     }
 
-    private void update()
+    public void update()
     {
+        orderEquipmentt = new List<OrderEquipment>();
         using (var connection = new MySqlConnection(new DBHelper()._connectionString.ConnectionString))
         {
             connection.Open();
@@ -44,8 +45,11 @@ public partial class ListOrders : Window
                             Id = reader.GetInt32("Id"),
                             Client = reader.GetInt32("Client"),
                             Worker = reader.GetString("name"),
+                            worker = reader.GetInt16("Worker"),
                             TypeEquip = reader.GetString(14),
+                            typeEquip = reader.GetInt16("TypeEquip"),
                             TypeFault = reader.GetString(12),
+                            typeFault = reader.GetInt16("TypeFault"),
                             SerialNumber = reader.GetInt32("SerialNumber"),
                             DescriptionProblem = reader.GetString("DescriptionProblem"),
 
@@ -55,11 +59,18 @@ public partial class ListOrders : Window
                 }
             }
             connection.Close();
+            listOrders.ItemsSource = orderEquipmentt;
+            
         }
     }
 
     private void OpenAddOrder(object? sender, RoutedEventArgs e)
     {
-        new AddOrderEquipment(_client).Show();
+        new AddOrderEquipment(_client,null,this).Show();
+    }
+
+    private void UpdateOrder(object? sender, SelectionChangedEventArgs e)
+    {
+        new AddOrderEquipment(_client, listOrders.SelectedItem as OrderEquipment,this).Show();
     }
 }
