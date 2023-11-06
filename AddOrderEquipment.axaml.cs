@@ -43,7 +43,7 @@ public partial class AddOrderEquipment : Window
         {
             btnAcceprOrder.Click += (sender, args) =>
             {
-               
+                InsertOrder();
             };
         }
         else
